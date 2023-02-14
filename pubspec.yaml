@@ -1,0 +1,221 @@
+name: app
+description: A new Flutter application.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+#版本号格式  1位:1位:2位
+version: 1.5.6+1050600000
+
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+#dependencies:
+#  flutter:
+#    sdk: flutter
+#  cupertino_icons:
+#  flutter_localizations:
+#    sdk: flutter
+#  flutter_swiper: 1.1.6 #轮播图
+#  flutter_svg:
+#  image_picker:
+#  android_intent:
+#  intl:
+#  package_info:
+#  audioplayers: 0.17.0
+#  event_bus:
+#  agora_rtc_engine: ^3.0.0
+#  flutter_nim:
+#    git:
+#      url: https://github.com/jonjon-coder/flutter_nim.git
+#      ref: new
+#  provider:
+#  dio:
+#  cached_network_image:
+#  oktoast:
+#  bubble:
+#  auto_size_text:  #文本自动缩放
+#  get: 3.26.0
+#  get_storage:
+#  imei_plugin:
+#  crypto:
+#  encrypt:
+#  svgaplayer_flutter: 1.2.0
+#  permission_handler:
+#  flutter_des:
+#    path: plugins/flutter_des
+#  webview_flutter: ^1.0.0r
+#  photo_view:
+#  url_launcher:
+#  slugid:
+#  tuple:
+#  async:
+#  blurhash_dart:
+#  octo_image:
+#  share:
+#  characters:
+#  flurry:
+#  flutter_html:
+#  image_gallery_saver:
+#  uni_links:
+#  flutter_audio_query:
+#  flutter_inapp_purchase: # iOS 内购
+#    path: plugins/flutter_inapp_purchase
+#  scrollable_positioned_list:
+#  web_socket_channel:
+#  badges:
+#  stomp_dart_client:
+#  marquee_text:
+#    git:
+#      url: https://github.com/bytedance/marquee_text.git
+#  visibility_detector:
+#  wakelock:
+#  fluwx_no_pay:
+#  waterfall_flow:
+#  linked_scroll_controller:
+#  bordered_text:
+#  flutter_slidable:
+#  qr_flutter:
+#  flutter_sequence_animation:
+#  flutter_sound_lite: 7.8.4
+#  #flutter_sound 这个包安卓可能有些依赖下载不来 得进入flutter_sound => android => build.gradle 修改
+#  #  maven { url  "https://dl.bintray.com/larpoux/TauRepo" } 改为
+#  #  maven { url 'https://jitpack.io' }
+#  #dependencies
+#  #  implementation 'com.github.Canardoux:tau_core:8.1.4'
+#
+#dev_dependencies:
+#  flutter_launcher_name:
+#    git:
+#      url: https://github.com/jonjon-coder/flutter_launcher_name.git
+#  flutter_launcher_icons:
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.5
+  flutter_localizations:
+    sdk: flutter
+  flutter_swiper: 1.1.6 #轮播图
+  flutter_svg: ^2.0.0+1
+  image_picker: ^0.8.6+1
+  android_intent: ^2.0.2
+  intl: ^0.17.0
+  package_info: ^2.0.2
+  audioplayers: ^3.0.1
+  event_bus: ^2.0.0
+  agora_rtc_engine: 5.3.0
+  nim_core: ^1.4.0
+  #  flutter_nim:
+#    git:
+#      url: https://github.com/jonjon-coder/flutter_nim.git
+#      ref: new
+  provider: ^6.0.5
+  path_provider: ^2.0.11
+  dio: ^4.0.6
+  cached_network_image: ^3.2.3
+  oktoast: ^3.3.1
+  bubble: ^1.2.1
+  auto_size_text: ^3.0.0 #文本自动缩放
+  get: ^4.6.5
+  get_storage: ^2.0.3
+  imei_plugin: 1.2.0
+  crypto: ^3.0.2
+  encrypt: ^5.0.1
+  svgaplayer_flutter: ^2.2.0
+#  permission_handler:
+  permission_handler: ^10.2.0
+  flutter_des: ^2.1.0
+  #  flutter_des:
+#    path: plugins/flutter_des
+  webview_flutter: 3.0.4
+  photo_view: ^0.14.0
+  url_launcher: ^6.1.8
+  slugid: ^1.1.1
+  tuple: ^2.0.1
+  async: ^2.10.0
+  blurhash_dart: ^1.2.0
+  octo_image: ^1.0.2
+  share: ^2.0.4
+  characters: ^1.2.1
+  flurry: ^1.0.0
+  flutter_html: ^3.0.0-alpha.5
+  image_gallery_saver: ^1.7.1
+  uni_links: ^0.5.1
+#  flutter_audio_query: 0.3.5+6
+#  flutter_inapp_purchase: # iOS 内购
+#    path: plugins/flutter_inapp_purchase
+  flutter_inapp_purchase: ^5.3.1
+  scrollable_positioned_list: ^0.3.5
+  web_socket_channel: ^2.3.0
+  badges: ^3.0.2
+  stomp_dart_client: ^0.4.4
+#  marquee_text:
+#    git:
+#      url: https://github.com/bytedance/marquee_text.git
+  marquee_text: ^2.5.0+1
+  visibility_detector: ^0.3.3
+  wakelock: ^0.6.2
+  fluwx_no_pay: ^3.12.2
+  waterfall_flow: ^3.0.2
+  linked_scroll_controller: ^0.2.0
+  bordered_text: ^2.0.0
+  flutter_slidable: ^2.0.0
+  qr_flutter: ^4.0.0
+  flutter_sequence_animation: ^4.0.0
+  flutter_sound: ^9.2.13
+  quiver: ^3.2.1
+#  flutter_sound_lite: 7.8.4
+
+dev_dependencies:
+#  flutter_launcher_name: ^0.0.1
+#  flutter_launcher_icons: ^0.11.0
+
+
+flutter_launcher_name:
+  name: "多肉语音"
+
+flutter_icons:
+  image_path: "icon/logo.jpg"
+  image_path_android: "icon/android.jpg"
+  android: true
+  ios: true
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/
+    #
+    - assets/svg/
+    - assets/svg/chat/
+    - assets/svg/home/
+    - assets/svg/home/rank/
+    - assets/svg/login/
+    - assets/svg/main/
+    - assets/svg/mine/
+    - assets/svg/mine/society/
+    - assets/svg/mine/young/
+    - assets/svg/mine/level/
+    - assets/svg/mine/task/
+    - assets/svg/mine/wallet/
+    - assets/svg/room/
+    - assets/svg/room/menu/
+    - assets/svg/room/setting/
+    - assets/svg/moment/
+    - assets/svg/num/white/
+    - assets/svg/num/yellow/
+    - assets/svg/post/
+    - assets/svg/call/
+    #
+    - assets/svga/
+    #
+    - assets/pact/
+    #
+    - img/
+    - img/level/
+    - img/level/charm/
+    - img/level/wealth/
+    - img/room/
+    - img/room/intro/
+    - img/mic/
+    - img/packet/

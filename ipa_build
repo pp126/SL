@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+find ./img/ -name ".DS_Store" -depth -exec rm {} \;
+find ./assets/ -name ".DS_Store" -depth -exec rm {} \;
+
+flutter pub get
+
+flutter pub run flutter_launcher_name:main
+flutter pub run flutter_launcher_icons:main
+
+#flutter build ios --obfuscate --split-debug-info=./gen/symbolize --bundle-sksl-path ./gen/flutter_01.sksl.json --dart-define="channelCode=ios"
+flutter build ios --obfuscate --split-debug-info=./gen/symbolize --bundle-sksl-path ./gen/flutter_01.sksl.json --dart-define="channelCode=superIos"
+flutter build ios --obfuscate --split-debug-info=./gen/symbolize --dart-define="channelCode=superIos"

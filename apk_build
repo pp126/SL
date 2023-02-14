@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+fvm flutter clean
+
+find ./img/ -name ".DS_Store" -depth -exec rm {} \;
+find ./assets/ -name ".DS_Store" -depth -exec rm {} \;
+
+fvm flutter pub get
+fvm flutter pub run flutter_launcher_name:main
+fvm flutter pub run flutter_launcher_icons:main
+
+rm -rf ./channel
+mkdir -m 777 ./channel
+#官方 应用宝、华为、VIVO、OPPO、小米、魅族、360、百度、三星
+#app yingyongbao huawei vivo oppo xiaomi meizu 360 baidu sanxing
+#for channelCode in app yingyongbao huawei vivo oppo xiaomi meizu 360 baidu sanxing
+#for channelCode in app
+for channelCode in app yingyongbao huawei vivo oppo xiaomi meizu 360 baidu sanxing
+  do
+    fvm flutter build apk --split-per-abi --no-shrink --obfuscate --split-debug-info=./gen/symbolize --bundle-sksl-path ./gen/flutter_01.sksl.json --dart-define="channelCode=$channelCode"
+    cp -r ./build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk ./channel/v7_channel_$channelCode.apk
+    echo "编译完成$channelCode 渠道包  ./channel/channel_$channelCode"
+  done
+
+#flutter build apk --split-per-abi --no-shrink --obfuscate --split-debug-info=./gen/symbolize --bundle-sksl-path ./gen/flutter_01.sksl.json --dart-define="channelCode=app"
+#flutter build apk --split-per-abi --no-shrink --obfuscate --split-debug-info=./gen/symbolize --dart-define="channelCode=app"
